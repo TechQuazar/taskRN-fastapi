@@ -14,7 +14,6 @@ async def read_image(img_path, lang='eng'):
     Returns
     :text: str, converted text from image
     """
-
     try:
         print(img_path)
         return pytesseract.image_to_string(img_path, lang=lang)
