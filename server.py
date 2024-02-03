@@ -15,6 +15,7 @@ def home(request: Request):
 
 @app.post("/api/v1/extract_text")
 async def extract_text(image: UploadFile = File(...)):
+    print('Image data on server',image)
     # temp_file = _save_file_to_disk(image, path="temp", save_as="temp")
     # text = await ocr.read_image(temp_file)
     
