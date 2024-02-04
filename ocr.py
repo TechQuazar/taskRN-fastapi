@@ -15,7 +15,8 @@ async def read_image(img_path, lang='eng'):
     :text: str, converted text from image
     """
     try:
-        print(img_path)
+        img_path = './'+img_path
+        print('Image path:',img_path)
         return pytesseract.image_to_string(img_path, lang=lang)
     except:
         return "[ERROR] Unable to process file: {0}".format(img_path)
